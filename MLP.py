@@ -156,10 +156,10 @@ def preprocess_and_split_data(data, batch_size=32, task=1):
         'saccade_length', 'saccade_duration', 'go_past_time']] = temp
     normalized = dropped
     # mapping condition and sentenceCondition to 0 and 1 for critical word classification
-    normalized[["condition", "sentenceCondition"]] = normalized[["condition", "sentenceCondition"]].map(lambda x: x.replace("none", "0"))
-    normalized[["condition", "sentenceCondition"]] = normalized[["condition", "sentenceCondition"]].map(lambda x: x.replace("control", "0"))
-    normalized[["condition", "sentenceCondition"]] = normalized[["condition", "sentenceCondition"]].map(lambda x: x.replace("pseudo", "1"))
-    normalized[["condition", "sentenceCondition"]] = normalized[["condition", "sentenceCondition"]].map(lambda x: x.replace("filler", "0"))
+    normalized[["condition", "sentenceCondition"]] = normalized[["condition", "sentenceCondition"]].apply(lambda x: x.replace("none", "0"))
+    normalized[["condition", "sentenceCondition"]] = normalized[["condition", "sentenceCondition"]].apply(lambda x: x.replace("control", "0"))
+    normalized[["condition", "sentenceCondition"]] = normalized[["condition", "sentenceCondition"]].apply(lambda x: x.replace("pseudo", "1"))
+    normalized[["condition", "sentenceCondition"]] = normalized[["condition", "sentenceCondition"]].apply(lambda x: x.replace("filler", "0"))
     normalized[["condition", "sentenceCondition"]] = normalized[["condition", "sentenceCondition"]].astype(int)
     mapped = normalized
 
