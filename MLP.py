@@ -350,7 +350,7 @@ def evaluate(data, parameters, task):
         torch.manual_seed(seed)
         model = TuneableModel(input_size, hidden_size, dropout, n_hidden)
         model.to(device)
-        optimizer = torch.optim.AdamW(model.parameters(), lr=learning_rate, betas=(0.99, 0.99), weight_decay=1e-4)
+        optimizer = torch.optim.AdamW(model.parameters(), lr=learning_rate, betas=(beta_1, beta_2), weight_decay=1e-2)
         checkpoint = torch.load(PATH)
         model.load_state_dict(checkpoint['model_state_dict'])
         optimizer.load_state_dict(checkpoint['optimizer_state_dict'])
