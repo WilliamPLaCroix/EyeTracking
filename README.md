@@ -12,7 +12,7 @@ All required data and scripts for running the project are included in the reposi
 To install the required dependencies, run the following command:
 
 ```sh
-- pip install -r requirements.txt
+pip install -r requirements.txt
 ```
 
 Author: William LaCroix
