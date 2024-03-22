@@ -1,4 +1,4 @@
-# EyeTracking
+# EyeTracking Seminar Project
 Final project for Saarland University Winter Semester 2023-2024 Eye Tracking seminar 
 
 This project seeks to extend the research performed in Ryzhova, Škrjanec, et al. 2023 by training neural a classifier for unknown word detection.
