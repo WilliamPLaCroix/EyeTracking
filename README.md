@@ -7,6 +7,14 @@ Using a standard suite of neural network libraries, a Pytorch implementation of 
 
 All required data and scripts for running the project are included in the repository. Data is read in from CSV, and either the notebook can be used for interactive prototyping, or the model script MLP.py can be run without arguments to perform full training runs on the various classification tasks.
 
+## installation:
+
+To install the required dependencies, run the following command:
+
+```sh
+- pip install -r requirements.txt
+```
+
 Author: William LaCroix
 
 Special acknowledgement goes to Margarita Ryzhova and Iza Škrjanec for their original work, as well as help in working with the dataset and developing predictive models.
