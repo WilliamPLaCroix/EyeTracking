@@ -374,7 +374,7 @@ if __name__ == "__main__":
     seed = 42 # for reproducibility
     torch.manual_seed(seed)
 
-    data = pd.read_csv('data.csv', delimiter=';')
+    data = pd.read_csv('../data/data.csv', delimiter=';')
 
     parameters = (0.0, 500, 0.001, 16, 6, 0.999, 0.999)
 
